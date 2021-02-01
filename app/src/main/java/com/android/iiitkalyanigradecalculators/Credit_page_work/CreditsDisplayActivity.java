@@ -1,4 +1,4 @@
-package com.android.iiitkalyanigradecalculators;
+package com.android.iiitkalyanigradecalculators.Credit_page_work;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
+import com.android.iiitkalyanigradecalculators.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

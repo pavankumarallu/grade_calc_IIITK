@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreditsDisplayActivity"></activity>
+        <activity android:name=".Credit_page_work.CreditsDisplayActivity"></activity>
         <activity android:name=".Main_Page_Work.Main_page_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

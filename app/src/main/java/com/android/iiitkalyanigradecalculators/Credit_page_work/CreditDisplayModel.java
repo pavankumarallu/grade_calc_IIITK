@@ -1,4 +1,4 @@
-package com.android.iiitkalyanigradecalculators;
+package com.android.iiitkalyanigradecalculators.Credit_page_work;
 
 public class CreditDisplayModel {
     private String subject;

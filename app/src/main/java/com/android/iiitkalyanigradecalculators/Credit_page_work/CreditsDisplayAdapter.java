@@ -1,4 +1,4 @@
-package com.android.iiitkalyanigradecalculators;
+package com.android.iiitkalyanigradecalculators.Credit_page_work;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.iiitkalyanigradecalculators.Main_Page_Work.MainPageAdapter;
-
-import org.w3c.dom.Text;
+import com.android.iiitkalyanigradecalculators.R;
 
 import java.util.List;
 

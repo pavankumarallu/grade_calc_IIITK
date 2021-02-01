@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.iiitkalyanigradecalculators.CreditsDisplayActivity;
+import com.android.iiitkalyanigradecalculators.Credit_page_work.CreditsDisplayActivity;
 import com.android.iiitkalyanigradecalculators.R;
 
 import java.util.List;
