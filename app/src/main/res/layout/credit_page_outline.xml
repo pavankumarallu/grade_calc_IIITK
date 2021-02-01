@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="15dp"
+    android:background="@drawable/button_out"
+    >
+    <TextView
+        android:id="@+id/cource_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CS101"
+        android:textSize="20dp"
+        android:textColor="#01579b"
+        android:textStyle="bold"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/lecturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr Bhaskar Biswas"
+        android:textSize="20dp"
+        android:textColor="#01579b"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="35dp"
+        />
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="20dp"
+        android:textColor="#01579b"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
+
+    />
+
+
+</LinearLayout>

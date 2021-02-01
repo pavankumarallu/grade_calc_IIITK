@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "688906949672",
+    "firebase_url": "https://iiit-kalyani-grade-calculator-default-rtdb.firebaseio.com",
+    "project_id": "iiit-kalyani-grade-calculator",
+    "storage_bucket": "iiit-kalyani-grade-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688906949672:android:06e35e6616953cefded11d",
+        "android_client_info": {
+          "package_name": "com.android.iiitkalyanigradecalculators"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688906949672-6oeaet61ld23bbqsfuftte369pneuagk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.iiitkalyanigradecalculator",
+            "certificate_hash": "cf65cdd89be748c8a8a5d266723edc4dada9019e"
+          }
+        },
+        {
+          "client_id": "688906949672-16hhgit1d4qdpk1et857ftqp45k2vbsn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZuf6CCZNYC8mRQRGZFMw4aAEbSZmyLZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688906949672-16hhgit1d4qdpk1et857ftqp45k2vbsn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
