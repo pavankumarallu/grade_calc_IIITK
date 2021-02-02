@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.android.iiitkalyanigradecalculators.R;
@@ -27,6 +28,7 @@ public class CreditsDisplayActivity extends AppCompatActivity {
     private Dialog loadingdialog;
     private List<CreditDisplayModel> lists;
     private RecyclerView recyclerView;
+    private Button calculate;
 
 
     @Override
@@ -35,6 +37,7 @@ public class CreditsDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_credits_display);
         SemNumber = getIntent().getStringExtra("Sem_no");
         recyclerView = findViewById(R.id.rv2);
+        calculate = findViewById(R.id.calculate);
         loadingdialog = new Dialog(this);
         loadingdialog.setContentView(R.layout.loading);
         loadingdialog.getWindow().setLayout(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);

@@ -45,15 +45,15 @@ public class CreditsDisplayAdapter extends RecyclerView.Adapter<CreditsDisplayAd
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             course_code = itemView.findViewById(R.id.cource_code);
-            lecturers = itemView.findViewById(R.id.lecturer);
             credit = itemView.findViewById(R.id.credits);
             calculate = itemView.findViewById(R.id.calculate);
         }
 
         public void setData(String subject, String lecturer, String credits) {
             course_code.setText(subject);
-            lecturers.setText(lecturer);
+
             credit.setText(credits);
+
         }
     }
 }
