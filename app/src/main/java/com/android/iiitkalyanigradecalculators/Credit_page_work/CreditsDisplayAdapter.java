@@ -29,7 +29,7 @@ public class CreditsDisplayAdapter extends RecyclerView.Adapter<CreditsDisplayAd
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        holder.setData(creditDisplayModels.get(position).getSubject(),creditDisplayModels.get(position).getLecturer(),creditDisplayModels.get(position).getCredits());
+        holder.setData(creditDisplayModels.get(position).getSubject(),creditDisplayModels.get(position).getLecturer(), String.valueOf(creditDisplayModels.get(position).getCredits()));
     }
 
     @Override

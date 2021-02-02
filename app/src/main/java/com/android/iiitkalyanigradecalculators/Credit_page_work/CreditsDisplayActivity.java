@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 import com.android.iiitkalyanigradecalculators.R;
@@ -24,7 +25,7 @@ public class CreditsDisplayActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
     private Dialog loadingdialog;
-    private List<CreditDisplayModel> list;
+    private List<CreditDisplayModel> lists;
     private RecyclerView recyclerView;
 
 
@@ -41,15 +42,15 @@ public class CreditsDisplayActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        list = new ArrayList<>();
-        final CreditsDisplayAdapter adapter = new CreditsDisplayAdapter(list);
+        lists = new ArrayList<>();
+        final CreditsDisplayAdapter adapter = new CreditsDisplayAdapter(lists);
         recyclerView.setAdapter(adapter);
         loadingdialog.show();
         myRef.child(SemNumber).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
-                    list.add(dataSnapshot1.getValue(CreditDisplayModel.class));
+                    lists.add(dataSnapshot1.getValue(CreditDisplayModel.class));
                 }
                 adapter.notifyDataSetChanged();
                 loadingdialog.dismiss();
@@ -61,5 +62,13 @@ public class CreditsDisplayActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==android.R.id.home){
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
