@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">IIITKALYANI GRADE CALCULATORS</string>
+    <string-array name="Spinner_grades">
+        <item>Select Grade</item>
+        <item>Ex</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>P</item>
+        <item>F</item>
+    </string-array>
 </resources>

@@ -1,4 +1,4 @@
-package com.android.iiitkalyanigradecalculators.Credit_page_work;
+package com.android.iiitkalyanigradecalculators;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,15 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-import com.android.iiitkalyanigradecalculators.Calculator_gpa_Activity;
-import com.android.iiitkalyanigradecalculators.R;
+import com.android.iiitkalyanigradecalculators.Credit_page_work.CreditDisplayModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,23 +22,27 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreditsDisplayActivity extends AppCompatActivity {
+public class Calculator_gpa_Activity extends AppCompatActivity {
+
     private String SemNumber;
+    private TextView heading,grade;
+    private Spinner spinner;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
     private Dialog loadingdialog;
     private List<CreditDisplayModel> lists;
     private RecyclerView recyclerView;
-    private Button calculate;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_credits_display);
+        setContentView(R.layout.activity_calculator_gpa_);
         SemNumber = getIntent().getStringExtra("Sem_no");
-        recyclerView = findViewById(R.id.rv2);
-        calculate = findViewById(R.id.calculate);
+        heading = findViewById(R.id.heaad);
+        grade = findViewById(R.id.gpa);
+        heading.setText(SemNumber);
+        recyclerView = findViewById(R.id.rv3);
         loadingdialog = new Dialog(this);
         loadingdialog.setContentView(R.layout.loading);
         loadingdialog.getWindow().setLayout(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -49,7 +51,7 @@ public class CreditsDisplayActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         lists = new ArrayList<>();
-        final CreditsDisplayAdapter adapter = new CreditsDisplayAdapter(lists);
+        final Calculate_gpa_Adapter adapter = new Calculate_gpa_Adapter(lists);
         recyclerView.setAdapter(adapter);
         loadingdialog.show();
         myRef.child(SemNumber).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -69,14 +71,6 @@ public class CreditsDisplayActivity extends AppCompatActivity {
             }
         });
 
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent setIntent = new Intent(CreditsDisplayActivity.this, Calculator_gpa_Activity.class);
-                setIntent.putExtra("Sem_no",SemNumber);
-                startActivity(setIntent);
-            }
-        });
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

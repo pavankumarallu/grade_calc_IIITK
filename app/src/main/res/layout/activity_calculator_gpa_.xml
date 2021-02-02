@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator_gpa_Activity"
+    android:background="@drawable/backgroun">
+    <TextView
+        android:id="@+id/heaad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Heading"
+        android:textAlignment="center"
+        android:textColor="#3d5afe"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
+    <LinearLayout
+        android:id="@+id/linlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heaad"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate GPA"
+                android:background="@drawable/button_out"
+                android:layout_margin="8dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#3d5afe"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/gpa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPA"
+            android:layout_marginTop="15dp"
+            android:layout_margin="8dp"
+            android:textSize="30dp"
+            android:textColor="#3d5afe"
+            android:background="@drawable/button_out"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Grades"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textColor="#3d5afe"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/linlay"
+        android:layout_margin="5dp"
+         />
+
+</RelativeLayout>
